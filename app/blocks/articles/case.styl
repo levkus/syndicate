@@ -1,0 +1,48 @@
+.case {
+  display: block;
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__picture {
+    flex-shrink: 0;
+    margin-right: 4rem;
+    width: 25rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__meta {
+    flex-grow: 1;
+  }
+
+  &__name {
+		margin-bottom: 2rem;
+		text-transform: uppercase;
+		font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  &__lead {
+    margin-bottom: 4rem;
+  }
+
+  &__achievements {
+    padding-left: 1.3rem;
+    list-style: square;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+
+    li {
+      margin-bottom: .5rem;
+    }
+  }
+}

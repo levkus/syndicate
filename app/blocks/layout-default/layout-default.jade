@@ -1,0 +1,14 @@
+include /../node_modules/bemto.jade/bemto
+include /../node_modules/jade-injected/jade-injected
+include ../page/page
+include ../scripts/scripts
+include ../articles/root
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page
+		main.site-wrapper
+			block content
+		+root
+		+scripts(['fontawesome.min.js', 'packs/brands.min.js', 'packs/light.min.js', 'app.min.js'])

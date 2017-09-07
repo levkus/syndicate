@@ -1,0 +1,48 @@
+.flickity-prev-next-button {
+  width: 2rem;
+  height: 2rem;
+  box-sizing: content-box;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
+  &:hover {
+    background: transparent;
+
+    .arrow {
+      fill: lightness($grey, 80%);
+    }
+  }
+
+  .arrow {
+    fill: lightness($grey, 40%);
+    transition: fill .3s;
+  }
+
+  &.previous {
+    left: 1rem;
+  }
+
+  &.next {
+    right: 1rem;
+  }
+}
+
+.flickity-page-dots {
+  bottom: 1.5rem;
+
+  .dot {
+    background-color: lightness($grey, 40%);
+    size: .5rem;
+    border-radius: 0;
+    transition: background-color .3s;
+
+    &.is-selected {
+      background-color: lightness($grey, 80%);
+    }
+  }
+}
+
+.flickity-viewport {
+  cursor: default !important;
+}

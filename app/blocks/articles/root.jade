@@ -1,0 +1,21 @@
+include ./web
+include ./mobile
+include ./video
+include ./vr
+include ./special
+include ./btl
+include ./gaming
+include ./traffic
+
+mixin root()
+	+b.root#root&attributes(attributes)
+		+e.container#root-container
+			+e.carousel#carousel
+				+web
+				+mobile
+				+video
+				+gaming
+				+special
+				+btl
+				+traffic
+		block

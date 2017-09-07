@@ -1,0 +1,43 @@
+mixin gaming()
+  +b('article').gaming
+    .article-container
+      h1 Gaming / Esports
+      +b.brand
+        +e.header
+          +e.logo(style="background-image: url('assets/logos/em.png')")
+          +e.meta
+            +e.name Electronic Mushroom
+            +e.website(href="https://electronicmushroom.com/") https://electronicmushroom.com/
+            +e.since Founded on 29 April 2013
+            h3 Contacts:
+            +e.contacts
+              +e.contacts-item
+                +e.contacts-name Evgeniy Olenev
+                a.phone(href="tel:+79265229115") +7 926 522-91-15
+                a.mail(href="mailto:eo@electronicmushroom.com") eo@electronicmushroom.com
+              +e.contacts-item
+                +e.contacts-name Dmitry Volkov
+                a.phone(href="tel:+79258249363") +7 925 824-93-63
+                a.mail(href="mailto:dv@electronicmushroom.com") dv@electronicmushroom.com
+            h3 Social:
+            +e.social
+              a(href="https://www.facebook.com/ElectronicMushroom/") #[i.fab.fa-facebook-f]
+              a(href="https://www.youtube.com/channel/UCZL12eJOIczT4IsUGsombsw") #[i.fab.fa-youtube]
+              a(href="https://twitter.com/electromushroom") #[i.fab.fa-twitter]
+              a(href="https://vk.com/electronicmushroom") #[i.fab.fa-vk]
+        +e.body
+          h1 Cases
+          +b.case
+            +e.container
+              +e.picture
+                img(src="assets/cases/em/bsg.jpg" alt="Black Star Gaming")
+              +e.meta
+                +e.name Blackstar Gaming
+                +e.lead
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia impedit eum asperiores ipsa eaque, atque aperiam quidem explicabo praesentium ex doloribus magni perferendis placeat. Voluptates error pariatur porro quaerat eum?
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur magni dolor natus voluptatum assumenda quod, rerum perferendis illum id recusandae tempore, eligendi neque provident inventore atque repellendus earum dignissimos quo expedita dolorum molestias architecto. Debitis, nostrum, corrupti aliquam nam quis error perspiciatis voluptates ab tenetur, incidunt laboriosam, maiores. Deserunt, autem.
+                h3 Our contribution:
+                +e('ul').achievements
+                  li Graphics Design
+                  li Video Production
+                  li Web Platform Concept

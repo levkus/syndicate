@@ -1,0 +1,113 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+@import 'helpers/flickity'
+@import 'helpers/perfect-scrollbar'
+@import 'helpers/modal'
+@import 'layout/section'
+@import 'layout/section-colors'
+@import 'layout/lead'
+
+import('../blocks/**/*')
+
+html, body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+
+  +below(1920px) {
+    font-size: 14px;
+  }
+
+  +below(1600px) {
+    font-size: 12px;
+  }
+}
+
+body {
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.4rem;
+
+  &.section-expanded {
+    .header {
+      pointer-events: all;
+      transform: translateY(0);
+      transition: 0;
+      opacity: 1;
+    }
+  }
+}
+
+a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: lightness($grey, 80%);
+  }
+}
+
+.site-wrapper {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%
+
+  +below(640px) {
+    flex-direction: column;
+  }
+}
+
+.filter-icon {
+  size: 4rem;
+  transition: .3s;
+
+  +below(1920px) {
+    size: 3rem;
+  }
+
+  +below(1600px) {
+    size: 2.5rem;
+  }
+
+  +below(1200px) {
+    size: 2rem;
+  }
+}
+
+
+.square-logo, .hor-logo {
+  transition: .7s;
+}
+
+.square-logo-the, .hor-logo-the {
+  fill: #fff;
+}
+
+.square-logo-border, .hor-logo-border {
+  fill: #999;
+}
+
+.square-logo-letters, .hor-logo-letters {
+  fill: #999;
+}
+
+letters = the S Y N D I C A T E border
+
+for letter, i in letters {
+  .square-logo-{letter}, .hor-logo-{letter} {
+    animation: glow 2s ease-in-out .5s * i infinite alternate;
+  }
+}
+
+@keyframes glow {
+  from { fill: #999 ;}
+  to { fill: #fff; }
+}

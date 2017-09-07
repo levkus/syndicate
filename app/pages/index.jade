@@ -1,0 +1,11 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/syndicate/syndicate
+include ../blocks/sections/sections
+
+block head
+	- var pageTitle = 'The Syndicate';
+
+block content
+	+syndicate.previewed
+	+sections
+	

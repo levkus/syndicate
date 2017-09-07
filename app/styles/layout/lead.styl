@@ -1,0 +1,46 @@
+.lead {
+  position: relative;
+  visibility: hidden;
+  overflow: hidden;
+  padding-top: 2rem;
+  max-height: 0;
+  opacity: 0;
+  font-weight: 300;
+
+  +below(640px) {
+    padding-top: 0rem;
+
+    p:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__learn-more {
+    display: block;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+
+    +below(640px) {
+      margin-top: 1rem;
+    }
+
+    &:hover {
+      color: lightness($grey, 80%);
+    }
+
+    &:before {
+      margin-right: .5rem;
+      content: '\f067';
+      font-size: .9rem;
+      font-family: 'FontAwesome';
+    }
+  }
+}

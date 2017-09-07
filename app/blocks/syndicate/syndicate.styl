@@ -1,0 +1,48 @@
+.syndicate {
+  justify-content: center;
+
+  .square-logo {
+    width: 5rem;
+    transition: .3s;
+
+    +below(640px) {
+      display: none;
+    }
+  }
+
+  &.previewed {
+
+    .square-logo {
+      width: 30rem;
+
+      +below(1600px) {
+        width: 25rem;
+      }
+
+      +below(1280px) {
+        width: 20rem;
+      }
+
+      +below(900px) {
+        width: 15rem;
+      }
+
+      +below(768px) {
+        width: 10rem;
+      }
+    }
+
+    .hor-logo {
+      width: 70%;
+    }
+  }
+
+  .hor-logo {
+    display: none;
+
+    +below(640px) {
+      display: block;
+      width: 50%;
+    }
+  }
+}
