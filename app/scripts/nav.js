@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import TweenLite from 'gsap'
+// import TweenLite from 'gsap'
 import showModal from './modal'
 
 export default function () {
@@ -9,20 +9,37 @@ export default function () {
     const $this = $(this)
 
     if (!$this.hasClass('previewed')) {
+      // own elements
       const $titleText = $this.find('.title__text')
-      const $siblings = $this.siblings()
-      const $siblingsTitle = $siblings.find('.title')
-      const $siblingsTitleText = $siblings.find('.title__text')
       const $lead = $this.find('.lead')
+      const $learnMore = $this.find('.lead__learn-more')
+
+      // siblings elements
+      const $siblings = $this.siblings()
+      const $siblingsTitleText = $siblings.find('.title__text')
       const $siblingsLead = $siblings.find('.lead')
+      const $sibligsLearnMore = $siblings.find('.lead__learn-more')
+
       $siblings.removeClass('previewed')
-      TweenLite.to($siblingsTitle, 0, { x: 0 })
-      TweenLite.to($siblingsTitleText, 0, { autoAlpha: 0 })
-      TweenLite.to($siblingsLead, 0, { autoAlpha: 0, maxHeight: 0 })
       $this.addClass('previewed')
-      TweenLite.to($titleText, 0.5, { autoAlpha: 1 }).delay(0.3)
+      $siblingsTitleText.hide()
+      $siblingsLead.hide().css({
+        maxHeight: 0,
+        opacity: 0
+      })
+      $sibligsLearnMore.css({ opacity: 0 })
+
       if (!$this.hasClass('syndicate')) {
-        TweenLite.to($lead, 0.5, { autoAlpha: 1, maxHeight: $lead[0].scrollHeight }).delay(0.5)
+        setTimeout(function () {
+          $titleText.fadeIn(300)
+          $lead.show().css({
+            maxHeight: $lead[0].scrollHeight,
+            opacity: 1
+          })
+        }, 300)
+        setTimeout(function () {
+          $learnMore.css({ opacity: 1 })
+        }, 700)
       }
     }
   })
@@ -30,9 +47,8 @@ export default function () {
   $learnMore.on('click', function (e) {
     e.stopPropagation()
     const cell = $(this).attr('data-article')
-    const test = document.getElementById('root-container')
-    console.log()
+    const container = document.getElementById('root-container')
     window.flkty.select(cell, true, true)
-    showModal(test)
+    showModal(container)
   })
 }

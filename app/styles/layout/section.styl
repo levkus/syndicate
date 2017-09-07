@@ -12,16 +12,16 @@ section {
   transition: .3s;
 
   &:not(.syndicate) {
-    padding-top: 2rem;
+    // padding-top: 2rem;
   }
 
   +below(1920px) {
-    width: 9rem;
     padding-x: 3rem;
+    width: 9rem;
   }
 
   +below(1600px) {
-    width: 8.5rem
+    width: 8.5rem;
   }
 
   +below(1200px) {
@@ -39,8 +39,8 @@ section {
   }
 
   &:hover {
-    .title .filter-icon {
-      fill: lightness($grey, 80%);
+    .title__icon {
+      color: lightness($grey, 80%);
     }
   }
 
@@ -101,25 +101,20 @@ section {
   justify-content: left;
 
   &__text {
-    position: absolute;
-    left: 3rem;
-    visibility: hidden;
-    margin-left: .5rem;
+    display: none;
+    margin-left: 1rem;
     color: lightness($grey, 80%);
     text-transform: uppercase;
     white-space: nowrap;
     font-weight: 500;
-    opacity: 0;
-
-    &.visible {
-      display: block;
-    }
+    line-height: 2.1rem;
+    height: 2rem;
   }
 
   &__icon {
-    font-size: 2rem;
     width: 2.5rem;
-    height: 2.3rem;
     text-align: center;
+    font-size: 2rem;
+    transition: .3s;
   }
 }

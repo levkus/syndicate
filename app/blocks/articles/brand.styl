@@ -1,9 +1,18 @@
 .brand {
   display: block;
+  padding: 4rem;
+
+  +below(1024px) {
+    padding: 2rem;
+  }
 
   &__header {
     display: flex;
     margin-bottom: 4rem;
+
+    +below(640px) {
+      display: block;
+    }
   }
 
   &__logo {
@@ -15,6 +24,12 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
+    +below(640px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
   }
 
   &__meta {
@@ -25,6 +40,7 @@
 		text-transform: uppercase;
 		font-weight: 500;
     font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   &__website {
@@ -46,12 +62,22 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
+
+    +below(1024px) {
+      display: block;
+    }
   }
 
   &__contacts-item {
     display: flex;
     flex-grow: 1;
     flex-flow: column nowrap;
+
+    +below(1024px) {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
   }
 
   &__contacts-name {
@@ -68,7 +94,7 @@
   }
 }
 
-.gaming {
+.electronic-mushroom {
   background-color: #3366CC;
   color: #fff;
 }

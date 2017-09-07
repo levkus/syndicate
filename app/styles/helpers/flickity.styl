@@ -5,6 +5,9 @@
   background: transparent;
   border: none;
   border-radius: 0;
+  position: fixed;
+  top: -2rem;
+  // transform: none;
 
   &:hover {
     background: transparent;
@@ -20,16 +23,20 @@
   }
 
   &.previous {
-    left: 1rem;
+    left: 0rem;
   }
 
   &.next {
-    right: 1rem;
+    left: 2rem;
   }
 }
 
 .flickity-page-dots {
-  bottom: 1.5rem;
+  bottom: auto;
+  // heigh: auto;
+  // position: fixed;
+  top: -2rem;
+  transform: none;
 
   .dot {
     background-color: lightness($grey, 40%);
