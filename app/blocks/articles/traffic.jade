@@ -1,4 +1,99 @@
 mixin traffic()
-	+b('article').traffic
-		.article-container
-			h1 Traffic
+  +b('article').traffic
+    .article-container
+      +b.brand.rtb-house
+        +e.header
+          +e.logo(style="background-image: url('assets/logos/rtb.svg')")
+          +e.meta
+            +e.name RTB House
+            +e.website(href="https://www.rtbhouse.com") www.rtbhouse.com
+            h3 Contacts:
+            +e.contacts
+              +e.contacts-item
+                a.phone(href="tel:+74956262272") +7 495 626-22-72
+                a.mail(href="mailto:rtbhouse@rtbhouse.com") rtbhouse@rtbhouse.com
+            h3 Social:
+            +e.social
+              a(href="https://www.facebook.com/RTBHouse") #[i.fab.fa-facebook-square]
+              a(href="https://twitter.com/rtbhouse") #[i.fab.fa-twitter]
+        +e.body
+          h1 Кейсы
+          +b.case
+            +e.container
+              +e.picture
+                img(src="assets/cases/rtb/def.jpg" alt="DefShop")
+                img(src="assets/cases/rtb/def2.jpg" alt="DefShop")
+              +e.meta
+                +e.name DefShop
+                +e.lead
+                  p DefShop является одним из крупнейших Европейских онлайн магазинов со специализацией на уличную и повседневную одежду. С продуктовой корзиной в более чем 200 брендов и 25,000 товаров.
+                  p Благодаря своему гибкому подходу, мы смогли адаптироваться к существующей модели выборочной дедупликации на основе инструмента Клиента. С помощью внесения изменений со стороны RTBHouse, DefShop смог осуществить системную интеграцию без задействования каких-либо дополнительных технических ресурсов.
+                h3 В одном из самых сложных месяцев, RTB House удалось:
+                +e('ul').achievements
+                  li Сгенерировать рост продаж DefShop на 6% (В зависимости от рынка).
+                  li Увеличить средний уровень конверсий на 3%.
+                  li Осуществить около 40% продаж через ретаргетинг на мобильные устройства.
+      +b.brand.gravity
+        +e.header
+          +e.logo(style="background-image: url('assets/logos/gravity.png')")
+          +e.meta
+            +e.name Gravity
+            +e.website(href="https://www.rtbhouse.com") www.rtbhouse.com
+            h3 Contacts:
+            +e.contacts
+              +e.contacts-item
+                +e.contacts-name Anton Noginov
+                a.phone(href="tel:+79032109921") +7 903 210-99-21
+                a.mail(href="mailto:anton@gravityagency.com") anton@gravityagency.com
+        +e.body
+          h1 Кейсы
+          +b.case
+            +e.container
+              +e.picture
+                img(src="assets/cases/gravity/ozon.jpg" alt="OZON.ru")
+              +e.meta
+                +e.name OZON.RU 2016
+                +e.lead
+                  p Ведение каналов интернет-магазина с суммарной аудиторией более 100 000 пользователей.
+                  p Продвижение идеологии интернет-шоппинга, продвижение конкретных товаров и акций, поддержка контента блога OzonГид.
+                  p Полноценное включение SM в планирование активностей бренда. Отслеживание эффективности с точки зрения продаж, оптимизация и увеличение потока заказов из соцмедиа, эксперименты с форматами и механиками.
+                h3  Результаты:
+                +e('ul').achievements
+                  li 74 000 — пользователей в VK
+                  li 37 000 — пользователей в Facebook
+                  li 11 000 - подписчиков в Instagram
+      +b.brand.applift
+        +e.header
+          +e.logo(style="background-image: url('assets/logos/applift.png')")
+          +e.meta
+            +e.name AppLift
+            +e.website(href="https://www.applift.com/") www.applift.com/
+            h3 Contacts:
+            +e.contacts
+              +e.contacts-item
+                +e.contacts-name Anton Noginov
+                a.mail(href="mailto:info@applift.com") info@AppLift.com
+            h3 Social:
+            +e.social
+              a(href="https://www.facebook.com/applift") #[i.fab.fa-facebook-square]
+              a(href="https://twitter.com/applift") #[i.fab.fa-twitter]
+        +e.body
+          h1 Кейсы
+          +b.case
+            +e.container
+              +e.picture
+                img(src="assets/cases/applift/playrix.jpg" alt="Playrix")
+              +e.meta
+                +e.name Playrix
+                +e.lead
+                  p The Game Changers: AppLift helps Playrix maximize ROAS through state-of-the-art retargeting.
+                h3 Objective:
+                +e('ul').achievements
+                  li Reach inactive users
+                  li Drive revenue events
+                h3  Solution and Results:
+                +e('ul').achievements
+                  li Audience segmentation allowed for categorizing users based on their previous activity such as in-app spend.
+                  li Users were then targeted across AppLift’s supply with “Call-to-Actions” designed to bring them back to the app.
+                  li 400% ROAS plus steady growth in scale.
+                  li 89% of lapsed users were reached.

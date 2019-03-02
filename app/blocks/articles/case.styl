@@ -1,6 +1,10 @@
 .case {
   display: block;
 
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
   h3 {
     text-transform: uppercase;
   }
@@ -53,6 +57,10 @@
 
     li {
       margin-bottom: .5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
     }
   }
 }

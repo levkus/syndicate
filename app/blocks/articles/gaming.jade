@@ -6,7 +6,7 @@ mixin gaming()
           +e.logo(style="background-image: url('assets/logos/em.png')")
           +e.meta
             +e.name Electronic Mushroom
-            +e.website(href="https://electronicmushroom.com/") https://electronicmushroom.com/
+            +e.website(href="https://electronicmushroom.com") electronicmushroom.com
             +e.since Founded on 29 April 2013
             h3 Contacts:
             +e.contacts
@@ -25,18 +25,31 @@ mixin gaming()
               a(href="https://twitter.com/electromushroom") #[i.fab.fa-twitter]
               a(href="https://vk.com/electronicmushroom") #[i.fab.fa-vk]
         +e.body
-          h1 Cases
+          h1 Кейсы
           +b.case
             +e.container
               +e.picture
                 img(src="assets/cases/em/bsg.jpg" alt="Black Star Gaming")
               +e.meta
                 +e.name Blackstar Gaming
-                +e.lead
-                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia impedit eum asperiores ipsa eaque, atque aperiam quidem explicabo praesentium ex doloribus magni perferendis placeat. Voluptates error pariatur porro quaerat eum?
-                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur magni dolor natus voluptatum assumenda quod, rerum perferendis illum id recusandae tempore, eligendi neque provident inventore atque repellendus earum dignissimos quo expedita dolorum molestias architecto. Debitis, nostrum, corrupti aliquam nam quis error perspiciatis voluptates ab tenetur, incidunt laboriosam, maiores. Deserunt, autem.
-                h3 Our contribution:
+                h3 Совместная разработка с Blackstar
                 +e('ul').achievements
-                  li Graphics Design
-                  li Video Production
-                  li Web Platform Concept
+                  li Графическое оформление
+                  li Видеопроизводство
+                  li Концепция веб платформы
+          +b.case
+            +e.container
+              +e.picture
+                img(src="assets/cases/em/adr.jpg" alt="Adrenalin Cyber League")
+                img(src="assets/cases/em/adr2.jpg" alt="Adrenalin Cyber League")
+              +e.meta
+                +e.name Adrenalin Cyber League
+                h3 Совместная разработка с EVENT GROUP
+                +e('ul').achievements
+                  li Концепция сезона
+                  li Турнирная платформа
+                  li Графическое оформление
+                  li Полный цикл видеопроизводства
+                  li Прямые трансляции
+                  li Финал ВДНХ
+                  li Финал на Игромире 2016

@@ -7,6 +7,7 @@ export default function (content) {
   overlay.classList.add('overlay')
   modal.classList.add('modal')
   close.classList.add('modal__close')
+  close.innerHTML = `<i class="fa fal fa-times"></i>`
   modal.appendChild(close)
   modal.appendChild(content)
   overlay.appendChild(modal)

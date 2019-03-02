@@ -47,31 +47,21 @@
 
   &__close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0rem;
+    right: 0rem;
     z-index: 201;
     display: block;
-    size: 2rem;
-    color: lightness($grey, 40%);
+    size: 3rem;
+    color: #fff;
     cursor: pointer;
     transition: .3s;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
 
     &:hover {
-      color: lightness($grey, 80%);
-    }
-
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      size: 2rem;
-      content: '+';
-      text-align: center;
-      font-weight: 400;
-      font-size: 3rem;
-      line-height: 2rem;
-      transform: rotate(45deg);
+      background-color: rgba(0, 0, 0, 8);
     }
   }
 }
